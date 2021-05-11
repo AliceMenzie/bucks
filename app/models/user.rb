@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-validates :username, presence: true, uniqueness: true, format: {with: /\A\w+\z/, message: 'username can only contain alphanumeric values'}       
+#  Username validations - add in once created username field
+# validates :username, presence: true, uniqueness: true, format: {with: /\A\w+\z/, message: 'username can only contain alphanumeric values'}       
 
 end

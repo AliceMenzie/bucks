@@ -2,4 +2,5 @@
 <p><%= @listing.task  %></p>
 <p><%= @listing.price  %></p>
 <p><%= @listing.industry  %></p>
+<%= image_tag @listing.images.first, alt:"image of tech"%>
 <%= button_to 'Destroy', @listing,method: :delete, class: 'btn btn-outline-danger' %>
