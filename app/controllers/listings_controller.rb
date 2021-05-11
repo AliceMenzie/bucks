@@ -26,6 +26,10 @@ class ListingsController < ApplicationController
     # @listing = Listing.find(params[:id])
   end
 
+  def delete
+    @listing.delete
+  end
+
   private 
 
   def listing_params
