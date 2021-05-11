@@ -1,7 +1,11 @@
 <div class = 'show-task'>
 <h1> Task Details  </h1> 
+
 <p>Industry: <%= @listing.industry  %></p>
 <p>Task: <%= @listing.task  %></p>
 <p>Price: $<%= @listing.price  %></p>
 <%= button_to 'Destroy', @listing,method: :delete, class: 'btn btn-outline-danger' %>
+<%= image_tag @listing.images.first, alt:"image of tech"%>
 </div>
+
+

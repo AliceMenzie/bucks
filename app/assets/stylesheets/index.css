@@ -1,0 +1,36 @@
+
+.body {
+    background-color: #F6D0B1;
+} 
+
+h1 {
+    color: #CE4760;
+    font-family: sans-serif;
+}
+
+.listings-all{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    /* background-color: #F6D0B1; */
+    align-items: center;
+    
+    
+}
+
+
+.listing-item {
+    border-radius: 10px;
+    border: solid black 3px;
+    color: #CE4760; 
+    background-color: #F6D0B1;
+    width-max: 100px;
+    height-max: 100px;
+    margin: 5%;
+    padding: 50px;
+    list-style-type: none;
+    /* border-radius: 3px; */
+}
+
