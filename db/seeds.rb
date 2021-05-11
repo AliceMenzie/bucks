@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'destroying old records'
+User.destroy_all
+
+
+puts 'seeding started'
+puts 'creatings user and listings'
+
+user1 = User.create(username: 'alice', 
+email:'alice@alice.com',
+ password:'password') 
+
+
+4.times do
+    user1.listings.create(
+        
+        industry: 'tech',
+        task: 'online coding lessons',
+        price: rand(5.0..100.0),
+        status: 1
+    )
+end 
+
+
+puts 'end of seed'

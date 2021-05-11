@@ -1,0 +1,5 @@
+<h1> Task Details  </h1> 
+<p><%= @listing.task  %></p>
+<p><%= @listing.price  %></p>
+<p><%= @listing.industry  %></p>
+<%= button_to 'Destroy', @listing,method: :delete, class: 'btn btn-outline-danger' %>

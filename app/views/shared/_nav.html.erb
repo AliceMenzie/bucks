@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Buck$$</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Home', root_path, class:'nav-link active' %>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <% if user_signed_in? %>
+        <%= current_user.username %>
+        <%= link_to 'Sign Out', destroy_user_session_path,method: :delete, class: 'btn btn-outline-danger'  %>
+      <% else %>
+        <%= link_to 'Sign In', new_user_session_path, class:'btn btn-outline-success' %>
+        <%= link_to 'Sign Up', new_user_registration_path, class:'btn btn-outline-warning' %>
+      <% end %>
+    </div>
+  </div>
+</nav>
+

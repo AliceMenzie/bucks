@@ -1,0 +1,17 @@
+<h1>Create a new Task</h1>
+
+<ul>
+<% @listing.errors.full_messages.each do |message|
+ %> <li> <%= message %></li>
+ <% end %>
+</ul>
+
+<%= form_with model: @listing, local: true do |form|  %>
+<%= form.label :industry %>
+<%= form.text_field :industry %>
+<%= form.label :task %>
+<%= form.text_area :task %>
+<%= form.label :price %>
+<%= form.number_field :price, min: 1.00, step: 0.05 %>
+<%= form.submit 'Create Task' %>
+<% end %>
