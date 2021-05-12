@@ -1,6 +1,13 @@
+<div class = 'show-task'> 
 <h1> Task Details  </h1> 
 <p><%= @listing.task  %></p>
 <p><%= @listing.price  %></p>
 <p><%= @listing.industry  %></p>
+
+<% if @listing.images.first == nil %>
+<%= image_tag "technology.jpg", :class => "image"%>
+<% else %>
 <%= image_tag @listing.images.first, alt:"image of tech"%>
+<% end %>
 <%= button_to 'Destroy', @listing,method: :delete, class: 'btn btn-outline-danger' %>
+ </div>

@@ -1,3 +1,26 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+    color: #CE4760;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+p {
+    margin-left: 20px;
+}
+
+.show-task {
+    background-color: #F6D0B1;
+    padding: 20px;
+    border: black 3px solid;
+    border-radius: 10px;
+    max-width: 50%;
+    margin-left: 20px;
+}
+
+.image {
+    max-width: 300px;
+    margin-bottom: 50px;
+}
